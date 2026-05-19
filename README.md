@@ -1,28 +1,59 @@
-[README.md](https://github.com/user-attachments/files/27986814/README.md)
-# Number Puzzle Game - AI驱动数字拼图游戏
+# 🧩 数字拼图游戏 (Number Puzzle Game)
 
-## 项目介绍
+一个基于 **C++17** 和 **FTXUI** 库开发的终端数字拼图游戏。玩家通过移动数字方块，将它们按顺序排列。
 
-一个基于C++17和FTXUI库开发的终端数字拼图游戏。玩家需要通过移动数字方块，将它们按顺序排列。
+## 📖 项目介绍
 
-### 特性
-- 🎮 美观的终端UI界面
-- ⌨️ 键盘控制（方向键/WASD）
-- 🎯 自动记录移动步数
+这是一个经典的 15 拼图游戏变种，在 4x4 的网格中，你需要将数字 1 到 15 按顺序排列，空格位于右下角。游戏使用 FTXUI 库实现美观的终端界面，支持键盘控制。
+
+### ✨ 特性
+
+- 🎮 美观的终端用户界面
+- ⌨️ 键盘控制（方向键 / WASD）
+- 📊 自动记录移动步数
 - 🔄 游戏重置功能
-- ✨ 胜利检测和庆祝界面
+- 🎉 胜利检测和庆祝界面
+- 🧩 保证每次开局都有解（通过随机移动生成）
 
-## 系统要求
+## 🎮 游戏玩法
 
-- CMake >= 3.14
-- C++17兼容编译器
-- FTXUI库
+### 游戏目标
+将数字按 1 到 15 的顺序排列，空格位于右下角。
 
-## 安装FTXUI
+### 操作方法
 
-### Ubuntu/Debian
+| 按键 | 功能 |
+|------|------|
+| ↑ 或 W | 向上移动方块 |
+| ↓ 或 S | 向下移动方块 |
+| ← 或 A | 向左移动方块 |
+| → 或 D | 向右移动方块 |
+| R | 重置游戏 |
+| Q | 退出游戏 |
+
+## 🛠️ 系统要求
+
+- **CMake** >= 3.14
+- **C++17** 兼容编译器（GCC / Clang / MSVC）
+- **FTXUI** 库（编译时自动下载）
+
+## 🔧 编译与运行
+
+### 方法一：使用 CMake FetchContent（推荐）
+
 ```bash
-sudo apt-get install libftxui-dev
+# 克隆仓库
+git clone https://github.com/shoku777/assignment.git
+cd assignment
 
-已测试通过的环境
-✅ GitHub Codespaces (Ubuntu 22.04)
+# 创建构建目录
+mkdir build && cd build
+
+# 配置项目（会自动下载 FTXUI）
+cmake ..
+
+# 编译
+make
+
+# 运行
+./puzzle_game
