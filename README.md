@@ -37,20 +37,23 @@
 - **C++17** 兼容编译器（GCC / Clang / MSVC）
 - **FTXUI** 库（编译时自动下载）
 
-## 📁 项目结构
-assignment/
-├── CMakeLists.txt # CMake 构建配置
-├── README.md # 项目文档
-└── src/
-├── main.cpp # 程序入口
-├── Game.hpp # 游戏主类头文件
-├── Game.cpp # 游戏主类实现
-├── PuzzleBoard.hpp # 游戏棋盘头文件
-└── PuzzleBoard.cpp # 游戏棋盘实现
-
 text
 # 编译
 make
 
 # 运行
 ./puzzle_game
+
+贡献指南
+Fork 本仓库
+
+创建特性分支 (git checkout -b feature/xxx)
+
+提交修改 (git commit -m '添加新功能')
+
+推送到分支 (git push origin feature/xxx)
+
+提交 Pull Request
+
+作者
+shoku777
