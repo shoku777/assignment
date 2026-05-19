@@ -7,29 +7,21 @@
 
 namespace ftxui {
 
-class Game : public ComponentBase {
+class Game {
 private:
     PuzzleBoard board_;
     int moves_;
     bool game_won_;
-    ScreenInteractive* screen_;
+    Component main_component_;
     
-    Component button_reset_;
-    Component button_quit_;
-    Component container_;
-    
-    Element RenderBoard();
-    Element RenderStats();
     void ResetGame();
+    Component CreateGameComponent();
     
 public:
     Game();
-    ~Game() override = default;
-    
-    Element Render() override;
-    bool OnEvent(Event event) override;
+    void Run();
 };
 
-}  // namespace ftxui
+}
 
 #endif

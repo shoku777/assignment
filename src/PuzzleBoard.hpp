@@ -4,8 +4,8 @@
 #include <vector>
 #include <utility>
 
-enum class Direction {
-    UP, DOWN, LEFT, RIGHT, NONE
+enum class MoveDirection {
+    Up, Down, Left, Right, None
 };
 
 class PuzzleBoard {
@@ -19,12 +19,11 @@ private:
     
 public:
     PuzzleBoard();
-    ~PuzzleBoard() = default;
     
     void Initialize();
     void Shuffle(int moves = 100);
     
-    bool Move(Direction dir);
+    bool Move(MoveDirection dir);
     bool IsSolved() const;
     
     int GetValue(int row, int col) const;

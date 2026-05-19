@@ -1,7 +1,6 @@
 #include "PuzzleBoard.hpp"
 #include <algorithm>
 #include <random>
-#include <chrono>
 #include <iostream>
 
 PuzzleBoard::PuzzleBoard() {
@@ -22,13 +21,16 @@ void PuzzleBoard::Initialize() {
 }
 
 void PuzzleBoard::Shuffle(int moves) {
-    std::vector<Direction> dirs = {Direction::UP, Direction::DOWN, Direction::LEFT, Direction::RIGHT};
+    std::vector<MoveDirection> dirs = {
+        MoveDirection::Up, MoveDirection::Down, 
+        MoveDirection::Left, MoveDirection::Right
+    };
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dis(0, 3);
     
     for (int i = 0; i < moves; ++i) {
-        Direction dir = dirs[dis(gen)];
+        MoveDirection dir = dirs[dis(gen)];
         Move(dir);
     }
 }
@@ -52,21 +54,21 @@ void PuzzleBoard::Swap(int row1, int col1, int row2, int col2) {
     std::swap(board_[row1][col1], board_[row2][col2]);
 }
 
-bool PuzzleBoard::Move(Direction dir) {
+bool PuzzleBoard::Move(MoveDirection dir) {
     int new_row = empty_pos_.first;
     int new_col = empty_pos_.second;
     
     switch(dir) {
-        case Direction::UP:
+        case MoveDirection::Up:
             new_row = empty_pos_.first - 1;
             break;
-        case Direction::DOWN:
+        case MoveDirection::Down:
             new_row = empty_pos_.first + 1;
             break;
-        case Direction::LEFT:
+        case MoveDirection::Left:
             new_col = empty_pos_.second - 1;
             break;
-        case Direction::RIGHT:
+        case MoveDirection::Right:
             new_col = empty_pos_.second + 1;
             break;
         default:
