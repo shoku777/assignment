@@ -23,3 +23,6 @@
 ### Ubuntu/Debian
 ```bash
 sudo apt-get install libftxui-dev
+
+已测试通过的环境
+✅ GitHub Codespaces (Ubuntu 22.04)
