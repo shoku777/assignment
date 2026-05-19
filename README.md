@@ -53,18 +53,6 @@ make
 - C++17 编译器
 - FTXUI（编译时自动下载）
 
-## 项目结构
-
-assignment/
-├── CMakeLists.txt
-├── README.md
-└── src/
-    ├── main.cpp
-    ├── Game.hpp
-    ├── Game.cpp
-    ├── PuzzleBoard.hpp
-    └── PuzzleBoard.cpp
-
 ## 贡献指南
 
 步骤：
