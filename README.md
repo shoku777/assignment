@@ -1,59 +1,90 @@
-# 🧩 数字拼图游戏 (Number Puzzle Game)
+# 数字拼图游戏
 
-一个基于 **C++17** 和 **FTXUI** 库开发的终端数字拼图游戏。玩家通过移动数字方块，将它们按顺序排列。
+一个基于 C++17 和 FTXUI 库开发的终端数字拼图游戏。
 
-## 📖 项目介绍
+## 项目介绍
 
-这是一个经典的 15 拼图游戏变种，在 4x4 的网格中，你需要将数字 1 到 15 按顺序排列，空格位于右下角。游戏使用 FTXUI 库实现美观的终端界面，支持键盘控制。
+这是一个经典的 15 拼图游戏。在 4x4 的网格中，你需要将数字 1 到 15 按顺序排列，空格位于右下角。
 
-### ✨ 特性
+特性：
 
-- 🎮 美观的终端用户界面
-- ⌨️ 键盘控制（方向键 / WASD）
-- 📊 自动记录移动步数
-- 🔄 游戏重置功能
-- 🎉 胜利检测和庆祝界面
-- 🧩 保证每次开局都有解（通过随机移动生成）
+- 键盘控制（方向键 / WASD）
+- 自动记录移动步数
+- 游戏重置功能
+- 胜利检测
 
-## 🎮 游戏玩法
+## 使用方法
 
 ### 游戏目标
-将数字按 1 到 15 的顺序排列，空格位于右下角。
 
-### 操作方法
+将数字按 1 到 15 的顺序排列，空格在右下角。
+
+### 操作按键
 
 | 按键 | 功能 |
 |------|------|
-| ↑ 或 W | 向上移动方块 |
-| ↓ 或 S | 向下移动方块 |
-| ← 或 A | 向左移动方块 |
-| → 或 D | 向右移动方块 |
+| ↑ 或 W | 向上移动 |
+| ↓ 或 S | 向下移动 |
+| ← 或 A | 向左移动 |
+| → 或 D | 向右移动 |
 | R | 重置游戏 |
 | Q | 退出游戏 |
 
-## 🛠️ 系统要求
+### 编译运行
 
-- **CMake** >= 3.14
-- **C++17** 兼容编译器（GCC / Clang / MSVC）
-- **FTXUI** 库（编译时自动下载）
+克隆仓库：
 
-text
-# 编译
+git clone https://github.com/shoku777/assignment.git
+cd assignment
+
+编译：
+
+mkdir build && cd build
+cmake ..
 make
 
-# 运行
+运行：
+
 ./puzzle_game
 
-贡献指南
-Fork 本仓库
+### 系统要求
 
-创建特性分支 (git checkout -b feature/xxx)
+- CMake >= 3.14
+- C++17 编译器
+- FTXUI（编译时自动下载）
 
-提交修改 (git commit -m '添加新功能')
+## 项目结构
 
-推送到分支 (git push origin feature/xxx)
+assignment/
+├── CMakeLists.txt
+├── README.md
+└── src/
+    ├── main.cpp
+    ├── Game.hpp
+    ├── Game.cpp
+    ├── PuzzleBoard.hpp
+    └── PuzzleBoard.cpp
 
-提交 Pull Request
+## 贡献指南
 
-作者
-shoku777
+步骤：
+
+1. Fork 本仓库
+2. 创建特性分支：git checkout -b feature/新功能
+3. 提交修改：git commit -m "添加新功能"
+4. 推送分支：git push origin feature/新功能
+5. 提交 Pull Request
+
+代码规范：
+
+- 使用 C++17 标准
+- 保持代码缩进一致
+- 添加必要注释
+
+## 许可证
+
+MIT License
+
+## 作者
+
+GitHub: shoku777
