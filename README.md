@@ -37,21 +37,16 @@
 - **C++17** 兼容编译器（GCC / Clang / MSVC）
 - **FTXUI** 库（编译时自动下载）
 
-## 🔧 编译与运行
-
-### 方法一：使用 CMake FetchContent（推荐）
-
-```bash
-# 克隆仓库
-git clone https://github.com/shoku777/assignment.git
-cd assignment
-
-# 创建构建目录
-mkdir build && cd build
-
-# 配置项目（会自动下载 FTXUI）
-cmake ..
-
+## 📁 项目结构
+assignment/
+├── CMakeLists.txt          # CMake 构建配置
+├── README.md               # 项目文档
+└── src/
+    ├── main.cpp            # 程序入口
+    ├── Game.hpp            # 游戏主类头文件
+    ├── Game.cpp            # 游戏主类实现
+    ├── PuzzleBoard.hpp     # 游戏棋盘头文件
+    └── PuzzleBoard.cpp     # 游戏棋盘实现
 # 编译
 make
 
