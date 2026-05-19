@@ -39,14 +39,16 @@
 
 ## 📁 项目结构
 assignment/
-├── CMakeLists.txt          # CMake 构建配置
-├── README.md               # 项目文档
+├── CMakeLists.txt # CMake 构建配置
+├── README.md # 项目文档
 └── src/
-    ├── main.cpp            # 程序入口
-    ├── Game.hpp            # 游戏主类头文件
-    ├── Game.cpp            # 游戏主类实现
-    ├── PuzzleBoard.hpp     # 游戏棋盘头文件
-    └── PuzzleBoard.cpp     # 游戏棋盘实现
+├── main.cpp # 程序入口
+├── Game.hpp # 游戏主类头文件
+├── Game.cpp # 游戏主类实现
+├── PuzzleBoard.hpp # 游戏棋盘头文件
+└── PuzzleBoard.cpp # 游戏棋盘实现
+
+text
 # 编译
 make
 
